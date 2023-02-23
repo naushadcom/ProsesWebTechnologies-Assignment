@@ -5,7 +5,7 @@ const router = express.Router();
 const users = require("../models/userSchema");
 
 router.get("/", (req, res) => {
-  res.send("Home Page");
+  res.send("Proses Web Technologies Pvt. Ltd.");
 });
 // resister  user
 
@@ -27,7 +27,7 @@ router.post("/register", async (req, res) => {
       // res.status(404).json("this user is already present")
       res.status(404).send({
         success: false,
-        message: "this user is already present",
+        message: "This user is already present",
       });
     } else {
       const adduser = new users({
