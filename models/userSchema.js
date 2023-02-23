@@ -8,15 +8,19 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
+    match: [
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      "Please enter a valid emaial",
+    ],
   },
   mobile: {
     type: Number,
     required: true,
   },
-  address:{
-    type:String,
-    require:true
-  }
+  address: {
+    type: String,
+    require: true,
+  },
 });
 
 const users = new mongoose.model("proses", userSchema);

@@ -99,7 +99,7 @@ const Register = () => {
           </button>
         </div>
         <hr />
-        <h3>.......Display User Details.......</h3>
+        <h3>.......Displayed User Details.......</h3>
 
         <div>
           <table>
