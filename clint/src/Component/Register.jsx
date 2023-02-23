@@ -98,7 +98,7 @@ const Register = () => {
             Add
           </button>
         </div>
-        <hr />
+        <hr style={{width:"93.7%",margin:"auto"}}/>
         <h3>.......Displayed User Details.......</h3>
 
         <div>
