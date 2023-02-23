@@ -57,6 +57,8 @@ const Edit = () => {
           <input
             onChange={(e) => setMobile(e.target.value)}
             type="number"
+            minLength={10}
+            maxLength={10}
             placeholder=" Enter your mobile"
           />
           <br></br>

@@ -80,6 +80,8 @@ const Register = () => {
             <input
               onChange={(e) => setMobile(e.target.value)}
               type="number"
+              minLength={10}
+              maxLength={10}
               placeholder=" Enter your Mobile Number"
             />
             <br></br>
