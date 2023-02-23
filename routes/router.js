@@ -16,7 +16,7 @@ router.post("/register", async (req, res) => {
   if (!user || !email || !mobile || !address) {
     res.status(404).send({
       success: false,
-      message: "plz fill the data",
+      message: "Please fill the userdata",
     });
   }
   try {

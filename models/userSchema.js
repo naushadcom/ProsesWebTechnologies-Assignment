@@ -17,8 +17,8 @@ const userSchema = new mongoose.Schema({
     type: Number,
     required: true,
     match: [
-      /^(\+\d{1,3}[- ]?)?\d{10}$/,
-      "Please enter a mobile number",
+      /\\A[0-9]{10}\\z/,
+      "Please enter a valid mobile number",
     ],
   },
   address: {
