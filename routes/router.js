@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
 
 router.post("/register", async (req, res) => {
   const { user, email, mobile, address } = req.body;
-
+  res.send(req.body)
   console.log(req.body);
 
   if (!user || !email || !mobile || !address) {
