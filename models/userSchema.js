@@ -16,8 +16,9 @@ const userSchema = new mongoose.Schema({
   mobile: {
     type: Number,
     required: true,
+    maxlength:10,
     match: [
-      /^[0-9]{10}$/,
+      /^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/,
       "Please enter a valid mobile number",
     ],
   },
