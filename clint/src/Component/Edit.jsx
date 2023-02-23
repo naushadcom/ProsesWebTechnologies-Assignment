@@ -48,7 +48,7 @@ const Edit = () => {
 
           <input
             onChange={(e) => setEmail(e.target.value)}
-            type="text"
+            type="email"
             placeholder=" Enter your Email"
           />
           <br></br>
@@ -56,7 +56,7 @@ const Edit = () => {
 
           <input
             onChange={(e) => setMobile(e.target.value)}
-            type="text"
+            type="number"
             placeholder=" Enter your mobile"
           />
           <br></br>

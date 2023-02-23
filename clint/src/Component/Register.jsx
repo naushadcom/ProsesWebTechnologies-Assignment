@@ -38,7 +38,6 @@ const Register = () => {
       .post("https://shy-ruby-crow-toga.cyclic.app/register", payload)
       .then((res) => {
         alert(res.data.message);
-
         GetData();
       })
       .catch((error) => {
@@ -64,7 +63,6 @@ const Register = () => {
         <h1>CRUD Assignment</h1>
         <div className="main">
           <div>
-            {" "}
             <input
               onChange={(e) => setUser(e.target.value)}
               type="text"
@@ -74,14 +72,14 @@ const Register = () => {
             <br></br>
             <input
               onChange={(e) => setEmail(e.target.value)}
-              type="text"
+              type="email"
               placeholder="Enter Your Email"
             />
             <br></br>
             <br></br>
             <input
               onChange={(e) => setMobile(e.target.value)}
-              type="text"
+              type="number"
               placeholder=" Enter your Mobile Number"
             />
             <br></br>
@@ -92,13 +90,14 @@ const Register = () => {
               placeholder="Enter your Address"
             />
           </div>
-
-          {/* <div></div> */}
+          <br />
+          <br />
+          <button className="submit" onClick={PostData} type="submit">
+            Add
+          </button>
         </div>
-
-        <button className="submit" onClick={PostData} type="submit">
-          Add
-        </button>
+        <hr />
+        <h3>.......Display User Details.......</h3>
 
         <div>
           <table>
@@ -107,6 +106,8 @@ const Register = () => {
               <th>Email</th>
               <th>Mobile No</th>
               <th>Address</th>
+              <th>Edit</th>
+              <th>Delete</th>
             </tr>
             <tbody>
               {data.map((elem) => {

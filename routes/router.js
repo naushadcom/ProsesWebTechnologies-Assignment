@@ -11,7 +11,6 @@ router.get("/", (req, res) => {
 
 router.post("/register", async (req, res) => {
   const { user, email, mobile, address } = req.body;
-  res.send(req.body)
   console.log(req.body);
 
   if (!user || !email || !mobile || !address) {
@@ -21,7 +20,7 @@ router.post("/register", async (req, res) => {
     });
   }
   try {
-    const preuser = await users.findOne({ DOB: DOB });
+    const preuser = await users.findOne({ user: user });
     console.log(preuser);
 
     if (preuser) {
